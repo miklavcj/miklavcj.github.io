@@ -1,10 +1,19 @@
 body {
-    width: 100%;
+    width: auto;
     margin: 0;
+		padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
 /*========== nav bar =====*/
+
+/*(header {
+    background-color: black;
+    color: white;
+		width: 100%;
+}*/
+
+
 
 header {
     overflow: hidden;
@@ -13,9 +22,6 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.em 0;
-    display: flex;
-    justify-content: space-between;
 }
 
 header a {
@@ -26,12 +32,15 @@ header a {
 }
 
 #nav-container {
-    width: 100%;
+		font-size: calc(.5em + 1vw);
+    width: 90%;
+		margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    padding: 1em 6em;
+  	justify-content: space-between;
+    padding: .5em 3em;
 
 }
+
 
 #jm {
     font-weight: 800;
@@ -39,6 +48,11 @@ header a {
     flex-direction: column;
     justify-content: center;
 }
+
+#jm:hover {
+		color: #F29057;
+}
+
 
 nav ul {
     list-style: none;
@@ -48,8 +62,10 @@ nav ul {
 }
 
 nav li {
+		
     margin-left: 2em;
 }
+
 
 nav a {
     text-decoration: none;
@@ -58,19 +74,17 @@ nav a {
     padding: .25em 0;
 }
 
-@media (max-width: 500px) {
-    header {
-        overflow: hidden;
-        background-color: black;
-        color: white;
-        position: fixed;
-        top: 0;
-    }
-    
+nav a:hover {
+		color: #F29057;
+}
+
+
+@media (max-width: 675px) {
     #nav-container {
-        padding: 1em 3em;
+			padding: 1em 1em;
+		}
     
-    }
+  
     
 }
 /*=============== Main =======*/
@@ -111,6 +125,7 @@ h1 {
 #hero-img {
     object-fit: cover; 
     object-position: -170px;
+		margin-left: 20px;
     width: 400px; 
     height: 600px;
     border-radius: 15px;
@@ -119,7 +134,9 @@ h1 {
     
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 675px) {
     #first-page {
         width: 100%;
         padding-top:10em ;
@@ -129,14 +146,16 @@ h1 {
     }
 
     #intro-text {
-    padding-left: 3em;
+    padding-left: 0em;
     width: 90%;
     margin: 0 auto;
     }
-
-    #hero-img {
+		
+		#hero-img {
        display: none;
     }
+
+    
 
     h1 {
         font-size: calc(1em + 15vw);
@@ -150,11 +169,12 @@ h1 {
 
 }
 
+
 /*======== Recent Projects =======*/
 
 
 #recent {
-    height: 2em;
+    height: 4em;
 }
 #recent-projects {
     width: 80%;
@@ -181,7 +201,6 @@ h3 {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 15em;
-    padding: 3em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
     grid-template-rows: repeat(2, 1fr); 
@@ -202,7 +221,14 @@ h3 {
     margin-top: 1em;
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 800px) {
+	#recent-projects {
+    width: 90%;
+    
+}
+
+
     #recent-projects h2 {
         font-size: 3.2em;
         font-weight: 700;
@@ -222,7 +248,7 @@ h3 {
 
 /*======== About Me ======= */
 #about {
-    height: 2em;
+    height: 4em;
 }
 
 #about-me {
@@ -256,7 +282,7 @@ h3 {
     
 }
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
     #about-me {
         margin-bottom: 7em;
     }
@@ -307,7 +333,7 @@ h3 {
     
 }
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
     #contact-me h2 {
         font-size: 3.2em;
         font-weight: 700;
@@ -320,17 +346,38 @@ h3 {
 }
 
 /*======== Footer ======= */
+
 footer {
     width: 100%;
     background: black;
     color: white;
     text-align: center;
     padding: 2em;
-    display: flex;
-    justify-content: space-evenly;
+    
+}
+
+.foot-container {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+  justify-content: space-evenly;
 }
 
 footer p {
     font-size: .75em
+}
+
+@media (max-width: 675px) {
+    footer {
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    font-size: calc(.5em + 1vw);
+}
 }
 
